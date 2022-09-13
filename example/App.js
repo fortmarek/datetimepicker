@@ -319,25 +319,31 @@ export const App = () => {
                 title="toggleMinMaxDate"
               />
             </View>
-            {show && (
-              <DateTimePicker
-                testID="dateTimePicker"
-                timeZoneOffsetInMinutes={tzOffsetInMinutes}
-                minuteInterval={interval}
-                maximumDate={maximumDate}
-                minimumDate={minimumDate}
-                value={date}
-                mode={mode}
-                is24Hour
-                display={display}
-                onChange={onChange}
-                style={styles.iOsPicker}
-                textColor={textColor || undefined}
-                accentColor={accentColor || undefined}
-                neutralButtonLabel={neutralButtonLabel}
-                disabled={disabled}
-              />
-            )}
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Text style={{flexShrink: 1}}>
+                This is a very very very very very very long text to showcase
+                behavior
+              </Text>
+              {show && (
+                <DateTimePicker
+                  testID="dateTimePicker"
+                  timeZoneOffsetInMinutes={tzOffsetInMinutes}
+                  minuteInterval={interval}
+                  maximumDate={maximumDate}
+                  minimumDate={minimumDate}
+                  value={date}
+                  mode={mode}
+                  is24Hour
+                  display={display}
+                  onChange={onChange}
+                  // style={styles.iOsPicker}
+                  textColor={textColor || undefined}
+                  accentColor={accentColor || undefined}
+                  neutralButtonLabel={neutralButtonLabel}
+                  disabled={disabled}
+                />
+              )}
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>
